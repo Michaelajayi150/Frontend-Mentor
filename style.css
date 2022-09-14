@@ -2,7 +2,7 @@
 
 :root {
   --dark-cyan: hsl(158, 36%, 37%);
-  --cream: hsl(32, 37%, 92%);
+  --cream: rgb(242, 235, 227);
 
   --very-dark-blue: hsl(212, 21%, 14%);
   --dark-grayish-blue: hsl(228, 12%, 48%);
@@ -93,7 +93,7 @@ h1 {
 }
 
 .attribution a {
-  color: rgb(10, 71, 2);
+  color: rgb(11, 30, 18);
 }
 
 .attribution a:hover {
