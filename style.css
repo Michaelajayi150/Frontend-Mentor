@@ -105,6 +105,7 @@ main {
 
   outline: none;
   border: none;
+  box-shadow: 0px 2px 4px var(--medium-grey);
   cursor: pointer;
   border-radius: 100vmax;
 }
