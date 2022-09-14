@@ -59,6 +59,10 @@ main {
   cursor: pointer;
 }
 
+.card h1 {
+  font-size: 1.5rem;
+}
+
 .card p {
   color: var(--light-grey);
 }
