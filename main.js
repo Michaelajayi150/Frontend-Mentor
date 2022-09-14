@@ -8,7 +8,7 @@ const form = document.getElementById("form");
 
 function fillCol() {
   for (let i = 1; i < 6; i++) {
-    var columns = document.createElement("label");
+    var columns = document.createElement("div");
     columns.className = "number";
     columns.innerHTML = i;
     container.appendChild(columns);
