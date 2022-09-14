@@ -10,8 +10,6 @@
 body {
   font: 400 15px "Outfit", sans-serif;
   background-color: var(--light-gray);
-  padding-left: 2rem;
-  padding-right: 2rem;
 
   height: 96vh;
 
@@ -40,6 +38,7 @@ main {
 .card .card-title {
   margin-top: auto;
 
+  font-size: 1.5rem;
   color: var(--dark-blue);
   font-weight: 700;
 }
