@@ -93,7 +93,11 @@ h1 {
 }
 
 .attribution a {
-  color: rgb(97, 29, 0);
+  color: rgb(10, 71, 2);
+}
+
+.attribution a:hover {
+  color: rgb(75, 78, 9);
 }
 
 @media only screen and (min-width: 768px) {
