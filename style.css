@@ -1,144 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 
 :root {
-  --primary-bg: hsl(257, 40%, 49%);
-  --primary-color: #fff;
-  --primary-hover-color: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
 }
 
 body {
-  background-image: url(./images/bg-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: var(--primary-bg);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  color: var(--primary-color);
+  font: 400 15px "Outfit", sans-serif;
+  background-color: var(--light-gray);
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  height: 96vh;
 
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-body header nav {
-  align-self: flex-start;
-  padding-top: 1rem;
-}
-
-/* Main */
 main {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
 }
 
-.hero-content {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
+.card {
+  max-width: 340px;
+  min-height: 500px;
 
+  border-radius: 15px;
+}
+
+.card .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.hero-content h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  text-transform: capitalize;
-}
-
-.hero-content .btn {
-  width: 230px;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  outline: none;
-  border: none;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
-  color: var(--primary-bg);
-}
-
-.hero-content .btn:hover {
-  background-color: var(--primary-hover-color);
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
+.card .card-title {
   margin-top: auto;
-  justify-self: end;
+
+  color: var(--dark-blue);
+  font-weight: 700;
 }
 
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.card .card-text {
+  margin: auto;
+  color: var(--grayish-blue);
 }
 
-.socials .fa {
-  width: 30px;
-  height: 30px;
-  font-size: 14px;
-  font-weight: 400;
-  border: 1.5px solid #fff;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card .card-image {
+  border-radius: 10px;
 }
 
-.socials .fa:hover {
-  cursor: pointer;
-  border-color: var(--primary-hover-color);
-  color: var(--primary-hover-color);
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    background-image: url(./images/bg-desktop.svg);
-    background-position: -50px;
-    background-size: cover;
-    height: 96vh;
-    position: relative;
-    gap: 2px;
-  }
-
-  main {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .hero-content {
-    width: 40%;
-    max-width: 500px;
-    text-align: left;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .hero-image {
-    width: 55%;
-    max-height: 70vh;
-  }
-
-  .hero-image-content {
-    height: 100%;
-  }
-
-  footer {
-    position: relative;
-  }
-
-  footer .socials {
-    position: absolute;
-    bottom: 2rem;
-    right: 1rem;
-  }
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
