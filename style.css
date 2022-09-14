@@ -35,6 +35,10 @@ footer,
   margin-top: auto;
 }
 
+nav img {
+  width: 70px;
+}
+
 main .hero-content {
   display: flex;
   flex-direction: column;
@@ -42,7 +46,11 @@ main .hero-content {
   justify-content: center;
 }
 
-h3 {
+.hero-content img {
+  width: 100%;
+}
+
+h1 {
   color: var(--neutral-gray);
   font-weight: 300;
   margin-bottom: 12px;
