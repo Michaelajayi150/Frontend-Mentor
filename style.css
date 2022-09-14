@@ -100,7 +100,7 @@ main {
   padding: 0.9rem;
   color: var(--white);
   font-weight: 700;
-  background-color: rgb(158, 49, 0);
+  background-color: #8f4000;
   text-transform: uppercase;
 
   outline: none;
@@ -110,7 +110,7 @@ main {
 }
 
 .card .card-btn:hover {
-  color: rgb(158, 49, 0);
+  color: #8f4000;
   background-color: var(--white);
 }
 
