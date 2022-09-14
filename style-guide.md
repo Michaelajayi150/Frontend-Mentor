@@ -11,25 +11,33 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Violet: hsl(257, 40%, 49%)
-- Soft Magenta: hsl(300, 69%, 71%)
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%)
 
 ## Typography
 
-### Headings
+### Body Copy
 
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 400, 600
+- Font size: 20px
 
-### Body
+### Fonts
 
-- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400
+- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- Weights: 300, 600, 700
 
 ## Icons
 
 For the social icons, you can use a font icon library. Some suggestions can be found below:
 
-- [Font Awesome](https://fontawesome.com/)
-- [IcoMoon](https://icomoon.io/)
-- [Ionicons](https://ionicons.com/)
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)

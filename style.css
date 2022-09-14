@@ -1,144 +1,199 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap");
 
 :root {
-  --primary-bg: hsl(257, 40%, 49%);
-  --primary-color: #fff;
-  --primary-hover-color: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+
+  --primary-blue: hsl(223, 87%, 63%);
+  --primary-green: hsl(120, 86%, 53%);
+  --secondary-blue: hsl(223, 100%, 88%);
+  --secondary-red: hsl(354, 100%, 66%);
+
+  --neutral-gray: hsl(0, 0%, 59%);
+  --neutral-blue: hsl(209, 33%, 12%);
 }
 
 body {
-  background-image: url(./images/bg-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: var(--primary-bg);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  color: var(--primary-color);
+  color: var(--neutral-blue);
+  font: 20px "Libre Franklin", sans-serif;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  max-width: 760px;
+  min-height: calc(96vh - 4rem);
+  padding-top: 4rem;
+  margin: auto;
 
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: space-between;
 }
 
-body header nav {
-  align-self: flex-start;
-  padding-top: 1rem;
-}
-
-/* Main */
-main {
+header,
+footer,
+.hero-content img {
   margin-top: auto;
-  margin-bottom: auto;
 }
 
-.hero-content {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
+main .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+h3 {
+  color: var(--neutral-gray);
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+b {
+  color: var(--neutral-blue);
+}
+
+.hero-content form {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 1.83em;
+  margin-bottom: 1.83em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 18px;
 }
 
-.hero-content h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  text-transform: capitalize;
+form .input-control {
+  position: relative;
+  max-width: 320px;
 }
 
-.hero-content .btn {
-  width: 230px;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
+form .input {
+  width: calc(100% - 3rem);
+  border-radius: 100vmax;
+  padding: 0.7rem 1.5rem;
   outline: none;
-  border: none;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
-  color: var(--primary-bg);
+  border: 1px solid var(--secondary-blue);
 }
 
-.hero-content .btn:hover {
-  background-color: var(--primary-hover-color);
-  color: var(--primary-color);
+input::placeholder {
+  color: var(--secondary-blue);
+}
+
+.input-control.error .input {
+  border-color: var(--secondary-red);
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.input-control.success .input {
+  border-color: var(--primary-green);
+}
+
+.input-control .error-message {
+  position: absolute;
+  left: 1.5rem;
+
+  color: var(--secondary-red);
+  font-size: 13px;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.input-control.error .error-message,
+.input-control.success .error-message {
+  visibility: visible;
+  opacity: 1;
+}
+
+.input-control.success .error-message {
+  color: var(--primary-green);
+}
+
+form button {
+  border-radius: 100vmax;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  background-color: var(--primary-blue);
+  font-weight: 600;
+
   cursor: pointer;
+  outline: none;
+  border: 1px solid var(--secondary-blue);
+  box-shadow: 2px 4px 6px var(--secondary-blue);
 }
 
-/* Footer */
-footer {
-  margin-top: auto;
-  justify-self: end;
-}
-
-.socials {
+footer .socials {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.socials .fa {
+.socials a {
   width: 30px;
   height: 30px;
   font-size: 14px;
   font-weight: 400;
-  border: 1.5px solid #fff;
+  border: 0.5px solid var(--secondary-blue);
   border-radius: 50%;
+  color: var(--primary-blue);
+  text-decoration: none;
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.socials .fa:hover {
   cursor: pointer;
-  border-color: var(--primary-hover-color);
-  color: var(--primary-hover-color);
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    background-image: url(./images/bg-desktop.svg);
-    background-position: -50px;
-    background-size: cover;
-    height: 96vh;
-    position: relative;
-    gap: 2px;
+.socials a:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+@media only screen and (min-width: 600px) {
+  .hero-content form {
+    max-width: 560px;
+    flex-direction: row;
+    margin-top: 0.8em;
+    margin-top: 1em;
+    gap: 8px;
   }
 
-  main {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  form .input-control {
+    min-width: 80%;
   }
 
-  .hero-content {
-    width: 40%;
-    max-width: 500px;
-    text-align: left;
-    justify-content: flex-start;
-    align-items: flex-start;
+  form button {
+    min-width: 150px;
   }
 
-  .hero-image {
-    width: 55%;
-    max-height: 70vh;
-  }
-
-  .hero-image-content {
-    height: 100%;
-  }
-
-  footer {
-    position: relative;
-  }
-
-  footer .socials {
-    position: absolute;
-    bottom: 2rem;
-    right: 1rem;
+  .hero-content img {
+    height: 75%;
+    margin-top: 0px;
   }
 }
