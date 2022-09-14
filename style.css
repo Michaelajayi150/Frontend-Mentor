@@ -1,144 +1,145 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 
 :root {
-  --primary-bg: hsl(257, 40%, 49%);
-  --primary-color: #fff;
-  --primary-hover-color: hsl(300, 69%, 71%);
+  --primary-bg: hsl(216, 12%, 8%);
+  --primary-btn: hsl(25, 97%, 53%);
+  --secondary-bg: hsl(215, 20%, 16%);
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(215, 18%, 18%);
 }
 
 body {
-  background-image: url(./images/bg-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  color: var(--white);
   background-color: var(--primary-bg);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  color: var(--primary-color);
-
+  font: 15px "Overpass", sans-serif;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-body header nav {
-  align-self: flex-start;
-  padding-top: 1rem;
-}
-
-/* Main */
-main {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.hero-content {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
+  height: 96vh;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-.hero-content h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  text-transform: capitalize;
-}
-
-.hero-content .btn {
-  width: 230px;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  outline: none;
-  border: none;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
-  color: var(--primary-bg);
-}
-
-.hero-content .btn:hover {
-  background-color: var(--primary-hover-color);
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  margin-top: auto;
-  justify-self: end;
-}
-
-.socials {
-  display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
-.socials .fa {
-  width: 30px;
-  height: 30px;
-  font-size: 14px;
-  font-weight: 400;
-  border: 1.5px solid #fff;
+.card {
+  padding: 2rem;
+  background-color: var(--secondary-bg);
+  color: var(--white);
+  border-radius: 20px;
+  margin: auto;
+
+  max-width: 400px;
+  min-height: 380px;
+}
+
+.rate {
+  display: none;
+}
+
+.card .card-star {
+  background-color: var(--medium-grey);
+  color: var(--light-grey);
   border-radius: 50%;
 
+  width: 45px;
+  height: 45px;
+
+  margin-bottom: auto;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.socials .fa:hover {
+  align-items: center;
   cursor: pointer;
-  border-color: var(--primary-hover-color);
-  color: var(--primary-hover-color);
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    background-image: url(./images/bg-desktop.svg);
-    background-position: -50px;
-    background-size: cover;
-    height: 96vh;
-    position: relative;
-    gap: 2px;
-  }
+.card p {
+  color: var(--light-grey);
+}
 
-  main {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
+.card .number {
+  background-color: var(--medium-grey);
+  color: var(--light-grey);
+  border-radius: 50%;
 
-  .hero-content {
-    width: 40%;
-    max-width: 500px;
-    text-align: left;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
+  width: 40px;
+  height: 40px;
 
-  .hero-image {
-    width: 55%;
-    max-height: 70vh;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-  .hero-image-content {
-    height: 100%;
-  }
+.card form {
+  display: flex;
+  flex-direction: column;
+}
 
-  footer {
-    position: relative;
-  }
+.card .number:hover {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
 
-  footer .socials {
-    position: absolute;
-    bottom: 2rem;
-    right: 1rem;
-  }
+.card .number.clicked {
+  background-color: var(--primary-btn);
+  color: var(--white);
+}
+
+.card .card-btn {
+  padding: 0.9rem;
+  color: var(--white);
+  font-weight: 700;
+  background-color: var(--primary-btn);
+  text-transform: uppercase;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 100vmax;
+}
+
+.card .card-btn:hover {
+  color: var(--primary-btn);
+  background-color: var(--white);
+}
+
+.card .error {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.error.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-btn-shown {
+  padding: 0.6rem 1rem;
+  align-self: center;
+  color: var(--primary-btn);
+  background-color: var(--medium-grey);
+  margin: auto;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 100vmax;
+}
+
+.thanks-card {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
